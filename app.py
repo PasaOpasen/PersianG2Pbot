@@ -36,7 +36,10 @@ Repository of algorithm: {db[r2]}"""
 
 @bot.message_handler(commands=['start','help'])
 def start_message(message):
-    bot.send_message(message.chat.id, instructions, reply_markup=keyboard1)
+    if message.chat.type == 'group':
+        bot.send_message(message.chat.id, instructions)
+    else:
+        bot.send_message(message.chat.id, instructions, reply_markup=keyboard1)
 
 
 @bot.message_handler(content_types=['text'])
