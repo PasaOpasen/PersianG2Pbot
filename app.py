@@ -16,7 +16,7 @@ bot = telebot.TeleBot(API_TOKEN)
 r1 = 'Bot repository'
 r2 = 'Algorithm repository'
 db = {
-    r1: 'https://github.com/PasaOpasen/PersianG2P',
+    r1: 'https://github.com/PasaOpasen/PersianG2Pbot',
     r2: 'https://github.com/PasaOpasen/PersianG2P'
 }
 
@@ -67,7 +67,7 @@ def getMessage():
 @server.route("/")
 def webhook():
     bot.remove_webhook()
-    bot.set_webhook(url='https://multi-translator-bot.herokuapp.com/' + API_TOKEN)
+    bot.set_webhook(url='https://persiang2p.herokuapp.com/' + API_TOKEN)
     return "!", 200
 
 
