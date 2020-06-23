@@ -23,10 +23,6 @@ db = {
 keyboard1 = telebot.types.ReplyKeyboardMarkup(True, True)
 keyboard1.row(r1, r2)
 
-server = Flask(__name__)
-PORT = int(os.environ.get('PORT', '8443'))
-
-
 instructions = f"""PersianG2P bot converts persian text to phonemes.
 
 Repository of bot: {db[r1]}
@@ -60,6 +56,9 @@ def send_message_global(message):
 
 bot.polling()
 
+
+server = Flask(__name__)
+PORT = int(os.environ.get('PORT', '8443'))
 
 @server.route('/' + API_TOKEN, methods=['POST'])
 def getMessage():
