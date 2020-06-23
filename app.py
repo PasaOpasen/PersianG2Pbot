@@ -7,7 +7,7 @@ from flask import Flask, request
 from PersianG2p import Persian_g2p_converter
 
 Converter = Persian_g2p_converter()
-tmp = list(" ًٌٍَُِآئابتثجحخدذرزسشصضطظعغفقلمنهوپچژکگی")
+tmp = list("آئابتثجحخدذرزسشصضطظعغفقلمنهوپچژکگی")
 
 API_TOKEN = '1222814941:AAG7v8UUXkrjxLQXFaOoxqssHCadpr1mlwM'
 
@@ -16,8 +16,8 @@ bot = telebot.TeleBot(API_TOKEN)
 r1 = 'Bot repository'
 r2 = 'Algorithm repository'
 db = {
-    r1: 'https://github.com/PasaOpasen/PersianG2Pbot',
-    r2: 'https://github.com/PasaOpasen/PersianG2P'
+    r1: r'https://github.com/PasaOpasen/PersianG2Pbot',
+    r2: r'https://github.com/PasaOpasen/PersianG2P'
 }
 
 keyboard1 = telebot.types.ReplyKeyboardMarkup(True, True)
@@ -34,7 +34,7 @@ Repository of bot: {db[r1]}
 Repository of algorithm: {db[r2]}"""
 
 
-@bot.message_handler(commands=['start','help'])
+@bot.message_handler(commands=['start', 'help'])
 def start_message(message):
     if message.chat.type == 'group':
         bot.send_message(message.chat.id, instructions)
