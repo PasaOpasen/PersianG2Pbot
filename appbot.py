@@ -7,6 +7,7 @@ from flask import Flask, request
 from PersianG2p import Persian_g2p_converter
 
 Converter = Persian_g2p_converter()
+print('---> Created converter')
 tmp = list("آئابتثجحخدذرزسشصضطظعغفقلمنهوپچژکگی")
 
 API_TOKEN = '1222814941:AAG7v8UUXkrjxLQXFaOoxqssHCadpr1mlwM'
@@ -74,4 +75,4 @@ def webhook():
 
 
 if __name__ == "__main__":
-    server.run(host="0.0.0.0", port=int(os.environ.get('PORT', 5000)))
+    server.run(host="0.0.0.0", port=int(os.environ.get('PORT', 8443)))
