@@ -10,7 +10,7 @@ Converter = Persian_g2p_converter()
 print('---> Created converter')
 tmp = list("آئابتثجحخدذرزسشصضطظعغفقلمنهوپچژکگی")
 
-API_TOKEN = '1222814941:AAG7v8UUXkrjxLQXFaOoxqssHCadpr1mlwM'
+API_TOKEN = '1222814941:AAF1yiqZZ_CuQfDltC_kqOb_ObSAlp3y0wI'
 
 bot = telebot.TeleBot(API_TOKEN)
 
