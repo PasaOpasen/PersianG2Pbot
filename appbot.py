@@ -11,6 +11,7 @@ print('---> Created converter')
 tmp = list("آئابتثجحخدذرزسشصضطظعغفقلمنهوپچژکگی")
 
 API_TOKEN = '1222814941:AAF1yiqZZ_CuQfDltC_kqOb_ObSAlp3y0wI'
+#API_TOKEN = '1059809966:AAHfjWbOyF3h-F_UZi6krWylOHvA7W3SGE4'
 
 bot = telebot.TeleBot(API_TOKEN)
 
