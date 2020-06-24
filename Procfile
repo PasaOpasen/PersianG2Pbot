@@ -1,1 +1,1 @@
-web: python3 appbot.py
+web: python appbot.py
