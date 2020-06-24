@@ -7,7 +7,7 @@ from flask import Flask, request
 from PersianG2p import Persian_g2p_converter
 
 Converter = Persian_g2p_converter()
-print('---> Created converter')
+print('-------> Created converter')
 tmp = list("آئابتثجحخدذرزسشصضطظعغفقلمنهوپچژکگی")
 
 API_TOKEN = '1222814941:AAF1yiqZZ_CuQfDltC_kqOb_ObSAlp3y0wI'
@@ -44,16 +44,15 @@ def start_message(message):
 def send_message_global(message):
     txt = message.text
 
-    for r in (r1, r2):
-        if txt == r:
-            bot.send_message(message.chat.id, db[r])
-            return
-
     if message.chat.type == 'group':
         if any((r in tmp for r in txt)):
             t = Converter(txt, True, True)
             bot.reply_to(message, t)
     else:
+        for r in (r1, r2):
+            if txt == r:
+                bot.send_message(message.chat.id, db[r])
+                return
         bot.send_message(message.chat.id, Converter(txt, True, True))
 
 bot.polling()
