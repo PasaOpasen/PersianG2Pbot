@@ -8,7 +8,7 @@ inflect==4.1.0
 itsdangerous==1.1.0
 Jinja2==2.11.2
 MarkupSafe==1.1.1
-nltk==3.3
+nltk==3.4.5
 num2fawords==1.1
 numpy==1.19.0
 PersianG2p==0.3.0
